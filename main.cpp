@@ -15,9 +15,7 @@ using namespace std;
 #include "E_IonFuel.h"
 #include "E_LiquidFuel.h"
 #include "E_SolidFuel.h"
-#include "FT_Liquid.h"
-#include "FT_RCS.h"
-#include "FT_Rocket.h"
+
 
 
 
@@ -29,8 +27,6 @@ stats
 */
 #include "Rocket.h"
 
-// Clase sin heredacion
-#include "Pods.h"
 
 // Procedimiento menu
 void menu()
@@ -38,10 +34,8 @@ void menu()
     // Imprime las opciones que tendra el programa
     cout << "\nMenu:\n";
     cout << "1. Engines\n";
-    cout << "2. Fuel Tanks\n";
-    cout << "3. Command Pods\n";
-    cout << "4. Show Rocket stats\n";
-    cout << "5. Quit\n\n";
+    cout << "2. Show Rocket stats\n";
+    cout << "3. Quit\n\n";
 }
 
 // Sub-menu de la opcion 1 (Engines)
@@ -61,30 +55,6 @@ void menu_engine()
     cout << "4. Ion Fuel: "
             "IX-6315 Dawn"
             "\n\n";
-}
-
-// Sub-menu de la opcion 2 (Fuel tanks)
-void menu_ft()
-{
-    // Imprime las opciones de fuel tanks
-    cout << "Choose your Fuel Tank:\n";
-    cout << "1. Rocket Fuel Tank: "
-            "FL-T200"
-            "\n";
-    cout << "2. Liquid Fuel Tank: "
-            "Mk1 Fuselage"
-            "\n";
-    cout << "3. RCS Fuel Tank: "
-            "FL-R20"
-            "\n";
-}
-// Sub-menu de la opcion 3 (Pods)
-void menu_pods()
-{
-    // Imprime las opciones de pods
-    cout << "Choose your Command Pod:\n";
-    cout << "1. MK-1:\n";
-    cout << "2. MK-3:\n";
 }
 
 int main(int argc, char *argv[])
@@ -142,42 +112,9 @@ int main(int argc, char *argv[])
                 break;
             };
             break;
-        // Caso 2 imprime el menu fuel tanks y agrega el seleccionado
-        case 2:
-            menu_ft();
-            int fuelt;
-            cin >> fuelt;
-            switch (fuelt)
-            {
-            case 1:
-                pi.addRocketFT();
-                break;
-            case 2:
-                pi.addLiquidFT();
-                break;
-            case 3:
-                pi.addRCSFT();
-                break;
-            };
-            break;
-        // Caso 3 imprime el menu pods y agrega el seleccionado
-        case 3:
-            menu_pods();
-            int pod;
-            cin >> pod;
-            switch (pod)
-            {
-            case 1:
-                pi.addPods(1);
-                break;
-            case 2:
-                pi.addPods(2);
-                break;
-            };
 
-            break;
         // Caso 4 muestra las estadisticas del cohete
-        case 4:
+        case 2:
             pi.showstats();
             break;
         }

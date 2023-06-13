@@ -16,10 +16,6 @@ A01710879
 #include "E_IonFuel.h"
 #include "E_LiquidFuel.h"
 #include "E_SolidFuel.h"
-#include "FT_Liquid.h"
-#include "FT_RCS.h"
-#include "FT_Rocket.h"
-#include "Pods.h"
 
 #include <string>
 using namespace std;
@@ -36,18 +32,11 @@ private:
     LiquidFuel e1;
     IonFuel e2;
     SolidFuel e3;
-    LiquidFT ft1;
-    RCSFT ft2;
-    RocketFT ft3;
-    Pods p1;
+
     //variables booleanas que declaran si es T/F que el cohete tenga el elemento
     bool hasLiquidFuel;
     bool hasIonFuel;
     bool hasSolidFuel;
-    bool hasLiquidFT;
-    bool hasRCSFT;
-    bool hasRocketFT;
-    bool hasPods;
 
     //Metodos publicos
     public:
@@ -59,10 +48,7 @@ private:
             hasLiquidFuel = false;
             hasIonFuel = false;
             hasSolidFuel = false;
-            hasLiquidFT = false;
-            hasRCSFT = false;
-            hasRocketFT = false;
-            hasPods = false;
+
         };
         Rocket(string pil){
             pilot = pil;
@@ -71,10 +57,7 @@ private:
             hasLiquidFuel = false;
             hasIonFuel = false;
             hasSolidFuel = false;
-            hasLiquidFT = false;
-            hasRCSFT = false;
-            hasRocketFT = false;
-            hasPods = false;
+
         };
         //Getters y setters
         string getPilot()
@@ -110,13 +93,6 @@ private:
             hasIonFuel = true;
         }
 
-        void addLiquidFT()
-        {
-            //Objeto 1 clase Fuel Tanks
-            ft1 = LiquidFT("Mk1 Fuselage", 2.25, 550, 400);
-            hasLiquidFT = true;
-        }
-
         void addSolidFuel(int type)
         {
             //if que declara los dos Objetos (3) de la misma clase a añadir
@@ -133,35 +109,6 @@ private:
             hasSolidFuel = true;
         }
 
-        void addRCSFT()
-        {
-            //Objeto 2 clase Fuel Tanks
-            ft2 = RCSFT("FL-R20", 0.10, 200, 20);
-
-            hasRCSFT = true;
-        }
-
-        void addRocketFT()
-        {
-            //Obejto 3 clase Fuel Tanks
-            ft3 = RocketFT("FL-T200", 1.125, 275, 90, 110);
-
-            hasRocketFT = true;
-        }
-
-        void addPods(int type)
-        {
-            //if que declara los dos Objetos (1) de la misma clase a añadir
-            if (type == 1)
-            {   
-                p1 = Pods("Mk1-Command Pod", 0.84, 600, 1);
-            }
-            else if (type == 2)
-            {   
-                p1 = Pods("Mk3-Command Pod", 2.72, 3800, 3);
-            }
-            hasPods = true;
-        }
         //Funcion que suma las masas y los costos acumulados
         void addMassCost() {
             int masas = 0;
@@ -178,22 +125,7 @@ private:
                 masas += e3.GetMasa();
                 costos += e3.GetCosto();
             }
-            if (hasLiquidFT) {
-                masas += ft1.GetMasa();
-                costos += ft1.GetCosto();
-            }
-            if (hasRCSFT) {
-                masas += ft2.GetMasa();
-                costos += ft2.GetCosto();
-            }
-            if (hasRocketFT) {
-                masas += ft3.GetMasa();
-                costos += ft3.GetCosto();
-            } 
-            if (hasPods) {
-                masas += p1.GetMasa();
-                costos += p1.GetCosto();
-            } 
+             
             mass = masas;
             cost = costos;
         }
@@ -221,18 +153,6 @@ private:
             if (hasSolidFuel) {
                 e3.showStatsE();
             }
-            if (hasLiquidFT) {
-                ft1.showStatsFT();
-            }
-            if (hasRCSFT) {
-                ft2.showStatsFT();
-            }
-            if (hasRocketFT) {
-                ft3.showStatsFT();
-            } 
-            if (hasPods) {
-                p1.showStatsP();
-            } 
 
             pilot = "";
             
