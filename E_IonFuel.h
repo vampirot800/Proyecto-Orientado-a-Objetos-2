@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program
+Proyecto Kerbal Space Program 2
 Ramiro Flores Villarreal
 A01710879
 */
