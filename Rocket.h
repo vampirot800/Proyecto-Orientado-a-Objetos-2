@@ -1,13 +1,12 @@
 /*
-Proyecto Kerbal Space Program
+Proyecto Kerbal Space Program 2
 Ramiro Flores Villarreal
 A01710879
 */
 
 /*
  *Clase Rocket contiene los métodos requeridos para elegir y sumar todas
-  las estadisticas del cohete, asi como composicion a las clases Engines.h,
-  FuelTanks.h, y Pods
+  las estadisticas del cohete, asi como composicion a la clase Engines.h
  */
 
 #ifndef ROCKET_H_
