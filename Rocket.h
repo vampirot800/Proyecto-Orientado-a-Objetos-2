@@ -1,6 +1,6 @@
 /*
 Proyecto Kerbal Space Program 2
-Ramiro Flores Villarreal
+Ramiro Flores Villarreal e Isabella Palma <3
 A01710879
 */
 
