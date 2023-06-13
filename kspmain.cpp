@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
          << endl;
 
     // Ciclo para que el propgrama siga corriendo mientras no elija salir
-    while (opcion < 5 && opcion > -1)
+    while (opcion < 3 && opcion > -1)
     {
         // impresion de menu
         menu();
