@@ -1,5 +1,5 @@
 /*
-Proyecto Kerbal Space Program
+Proyecto Kerbal Space Program 2
 Ramiro Flores Villarreal
 A01710879
 main.cpp
@@ -11,12 +11,10 @@ main.cpp
 using namespace std;
 
 // Importacion de archivos
-// Clases que heredan de "Engines.h" y "FuelTanks.h"
+// Clases que heredan de "Engines.h"
 #include "E_IonFuel.h"
 #include "E_LiquidFuel.h"
 #include "E_SolidFuel.h"
-
-
 
 
 /*Clase con composicion donde se crean los objetos
