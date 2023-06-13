@@ -1,6 +1,6 @@
-# Proyecto-Kerbal-Space-Program-VAB
+# Proyecto-Kerbal-Space-Program-VAB-2
 
-## Proyecto Orientado a Objetos
+## Proyecto Orientado a Objetos 2
 
 ## Diagrama de clases
 
