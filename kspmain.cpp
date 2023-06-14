@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
 
         // Caso 4 muestra las estadisticas del cohete
         case 2:
-            pi.showstats();
+            pi.stats();
             break;
         }
     }

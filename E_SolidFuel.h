@@ -47,8 +47,25 @@ class SolidFuel: public Engine{
         int GetComb() {
             return comb;
         };
+         int setComb(string newcomb) {
+             return comb;
+         };
+         int setComb(string newcomb, int number) {
+             return comb;
+         };
+        //Ejemplo de sobrecarga
+        // int setComb(string newcomb) {
+        //     return comb;
+        // };
+        // int setComb(string newcomb, int number) {
+        //     return comb;
+        // };
 
-    //Funcion imprime stats para subclase de Engines, se agregan variables 
+    /*
+    Se convierte Engines a clase abstracta, creando un solo metodo
+    que devolvera diferrentes estadisticas dependiendo del tipo de 
+    engine, se agregan variables 
+    */
         void ShowStats(){
 
             cout << "Engine Type:" << tipo << endl;

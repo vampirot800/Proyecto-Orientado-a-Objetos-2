@@ -107,7 +107,16 @@ private:
             }
             hasSolidFuel = true;
         }
+        //Funcion futura de sobrecarga
+        /*
+        void buildRocket(string name) {
+            engine = Engine(name)
+        }
 
+        void buildRocket(Engine newEngine) {
+            engine = newEngine
+        }
+        */
         //Funcion que suma las masas y los costos acumulados
         void addMassCost() {
             int masas = 0;
@@ -131,7 +140,7 @@ private:
 
         /*Funcion que muestra las estadisticas del cohete con los objetos
         seleccionados*/
-        void showstats(){
+        void stats(){
 
             //Funcion que suma costos y masas de objetos
             addMassCost();
@@ -141,7 +150,9 @@ private:
             cout << "Rocket Mass:" << mass << endl;
             cout << "Total cost:" << cost << "Funds" << endl;
         
-            /*Condicionales para todos los objetos disponibles, imprime 
+            /*Condicionales para todos los objetos disponibles,
+            hace uso de la clase abstracta engines e imprime
+            la misma funcion con diferentes objetos, muestra 
             las estadisticas.*/
             if (hasLiquidFuel) {
                 e1.ShowStats();
