@@ -49,7 +49,7 @@ class SolidFuel: public Engine{
         };
 
     //Funcion imprime stats para subclase de Engines, se agregan variables 
-        void showStatsE(){
+        void ShowStats(){
 
             cout << "Engine Type:" << tipo << endl;
             cout << "Engine Mass:" << masa << endl;

@@ -144,13 +144,13 @@ private:
             /*Condicionales para todos los objetos disponibles, imprime 
             las estadisticas.*/
             if (hasLiquidFuel) {
-                e1.showStatsE();
+                e1.ShowStats();
             }
             if (hasIonFuel) {
-                e2.showStatsE();
+                e2.ShowStats();
             }
             if (hasSolidFuel) {
-                e3.showStatsE();
+                e3.ShowStats();
             }
 
             pilot = "";

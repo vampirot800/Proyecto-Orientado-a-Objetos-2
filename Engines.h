@@ -110,18 +110,8 @@ public:
         vacTWR = vt;
     }
 
+    virtual void ShowStats() = 0;
 
-    //Funcion imprime stats para clase de Engines
-    void showStatsE(){
-
-        cout << "Engine Type:" << tipo << endl;
-        cout << "Engine Mass:" << masa << endl;
-        cout << "Engine Cost:" << costo << endl;
-        cout << "atm Thrust:" << atmThrust << endl;
-        cout << "vac Thrust" << vacThrust << endl;
-        cout << "atm TWR:" << atmTWR << endl;
-        cout << "vac TWR:" << vacTWR << endl;
-    }
 };
 
 #endif

@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 {
     int opcion = 0;
 
-    Rocket pi("");
+    Rocket pi("");    
 
     // Impresion de introduccion al programa
     cout << "\n Wecome to the Kerbal Space program Vehicle Assembly Building!\n";
