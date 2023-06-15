@@ -2,7 +2,7 @@
 Proyecto Kerbal Space Program 2
 Ramiro Flores Villarreal
 A01710879
-main.cpp
+kspmain.cpp
 */
 
 // Bibliotecas
@@ -21,7 +21,7 @@ using namespace std;
 que tendra el cohete, contiene todos los atributos
 metodos de geters y setters, metodos para añadir
 y guardar objetos al cohete, y metodos para imprimir
-stats
+stats haciendo uso de polimorfismo y abstraccion
 */
 #include "Rocket.h"
 
@@ -98,6 +98,7 @@ int main(int argc, char *argv[])
 
             pi.addEngine(engine);
 
+            //COMENTADO PARA OPTIMIZACION DE CODIGO
             // switch (engine)
             // {
             // case 1:
@@ -113,9 +114,12 @@ int main(int argc, char *argv[])
             //     pi.addIonFuel();
             //     break;
             // };
+
             break;
 
-        // Caso 4 muestra las estadisticas del cohete
+        // Caso 4 muestra las estadisticas del cohete 
+        // con metodo de clase abstracta
+
         case 2:
             pi.stats();
             break;

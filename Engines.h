@@ -7,8 +7,8 @@ A01710879
 /*
  *Clase Engines contiene los métodos y atributos de los motores disponibles
  *tiene 3 clases hijas; los diferentes tipos de motores que heredan los
- atributos de la clase madre
- * LiquidFuel, SolidFuel y IonFuel
+ atributos de la clase madre, LiquidFuel, SolidFuel y IonFuel
+ es una clase abstracta
  */
 
 #ifndef ENGINES_H_
@@ -53,7 +53,8 @@ public:
         atmTWR(atmT),
         vacTWR(vacT) {};
 
-    //Getters y Setters
+    //Getters y Setters 
+    //(Se cambiaron a virtual para poder hacer uso de ellos con polimorfismo)
     virtual string GetTipo()
     {
         return tipo;
@@ -111,7 +112,13 @@ public:
         vacTWR = vt;
     }
 
-    //Clase Abstracta
+    /*Clase Abstracta
+    
+    Se convierte Engines a clase abstracta, creando un solo metodo
+    que devolvera diferrentes estadisticas dependiendo del tipo de 
+    engine, se agregan variables 
+
+    */
     virtual void ShowStats() = 0;
 
 };

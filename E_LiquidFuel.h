@@ -49,7 +49,7 @@ class LiquidFuel : public Engine
             return TVC;
     }
 
-    //Funcion imprime stats para subclase de Engines, se agregan variables 
+    //Funcion abstracta imprime stats para subclase de Engines, se agregan variables 
         void ShowStats(){
 
             cout << "Engine Type:" << tipo << endl;

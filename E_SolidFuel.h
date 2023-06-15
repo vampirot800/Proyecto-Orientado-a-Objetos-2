@@ -62,11 +62,7 @@ class SolidFuel: public Engine{
         //     return comb;
         // };
 
-    /*
-    Se convierte Engines a clase abstracta, creando un solo metodo
-    que devolvera diferrentes estadisticas dependiendo del tipo de 
-    engine, se agregan variables 
-    */
+        //Funcion abstracta imprime stats para subclase de Engines, se agregan variables 
         void ShowStats(){
 
             cout << "Engine Type:" << tipo << endl;

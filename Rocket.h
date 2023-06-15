@@ -7,6 +7,7 @@ A01710879
 /*
 Clase Rocket contiene los métodos requeridos para elegir y sumar todas
 las estadisticas del cohete, asi como composicion a la clase Engines.h
+y uso de polimorfismo 
 */
 
 #ifndef ROCKET_H_
@@ -28,8 +29,11 @@ private:
     string pilot;
     double cost;
     double mass;
+
+//Apuntador de clase Engine para uso de polimorfismo
     Engine *engine;
 /*
+    COMENTADO PARA OPTIMIZACION DE CODIGO
     //variables booleanas que declaran si es T/F que el cohete tenga el elemento
     bool hasLiquidFuel;
     bool hasIonFuel;
@@ -42,6 +46,8 @@ private:
             pilot = "Piloto";
             cost = 0;
             mass = 0;
+
+            //COMENTADO PARA OPTIMIZACION DE CODIGO
             // hasLiquidFuel = false;
             // hasIonFuel = false;
             // hasSolidFuel = false;
@@ -51,6 +57,8 @@ private:
             pilot = pil;
             cost = 0;
             mass = 0;
+
+            //COMENTADO PARA OPTIMIZACION DE CODIGO
             // hasLiquidFuel = false;
             // hasIonFuel = false;
             // hasSolidFuel = false;
@@ -73,19 +81,21 @@ private:
         {
             pilot = p;
         }
-        //Funciones que añaden los objetos seleccionados
+        //Funciones que añaden los engines seleccionados
         void addEngine(int option)
         {
-            //Objeto 1 clase Engine
+            //tipo 1 clase Engine -> Polimorfismo
             engine = new LiquidFuel("LV-T45 Swivel", 1.50, 1200, 167.97, 215.0, 11.42, 
             14.62, 13.703, 3.0);
-            // hasLiquidFuel = true;
+            // hasLiquidFuel = true; //COMENTADO PARA OPTIMIZACION DE CODIGO
 
-            //Objeto 2 clase Engine
+            //tipo 2 clase Engine -> Polimorfismo
             engine = new IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816,
              0.486, 8.741);
-            // hasIonFuel = true;
+            
+            // hasIonFuel = true; //COMENTADO PARA OPTIMIZACION DE CODIGO
 
+            //Switch haciendo uso de apuntadores y clases (polimorfismo)
             switch (option)
             {
             case 1:
@@ -100,41 +110,39 @@ private:
                 break;
             case 4:
                 engine = new IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816,
-                0.486, 8.741);;
+                0.486, 8.741);
 
                 break;
             };
         }
 
+
         void addSolidFuel(int type)
         {
-            //if que declara los dos Objetos (3) de la misma clase a añadir
+            //if que declara los dos tipos de engine de la misma clase a añadir
             if (type == 1)
             {
+
+            //tipo 3 clase Engine -> Polimorfismo
                 engine = new SolidFuel("RT_10 Hammer", 3.56, 400, 197.90, 227.00,
                  5.66, 6.50, 23.7, 375);
             }
             else if (type == 2)
             {
+                //tipo 4 clase Engine -> Polimorfismo
                 engine = new SolidFuel("BACC Thumper", 7.65, 850, 250.00, 300.00,
                  3.33, 4.00, 42.2, 820);
             }
             // hasSolidFuel = true;
         }
-        //Funcion futura de sobrecarga
-        /*
-        void buildRocket(string name) {
-            engine = Engine(name)
-        }
 
-        void buildRocket(Engine newEngine) {
-            engine = newEngine
-        }
-        */
-        //Funcion que suma las masas y los costos acumulados
+        //Funcion que suma las masas y los costos acumulados haciendo uso de pointers
         void addMassCost() {
+
             mass = engine->GetMasa();
             cost = engine->GetCosto();
+
+            //COMENTADO PARA OPTIMIZACION DE CODIGO
             // int masas = 0;
             // int costos = 0;
             // if (hasLiquidFuel) {
@@ -154,8 +162,8 @@ private:
             // cost = costos;
         }
 
-        /*Funcion que muestra las estadisticas del cohete con los objetos
-        seleccionados*/
+        //Funcion que muestra las estadisticas del cohete con los objetos
+        //seleccionados
         void stats(){
 
             //Funcion que suma costos y masas de objetos
@@ -173,6 +181,7 @@ private:
             
             engine->ShowStats();
             
+            //COMENTADO PARA OPTIMIZACION DE CODIGO
             // if (hasLiquidFuel) {
             //     e1.ShowStats();
             // }
@@ -184,9 +193,6 @@ private:
             // }
 
             pilot = "";
-            
-
-
         }
 
         

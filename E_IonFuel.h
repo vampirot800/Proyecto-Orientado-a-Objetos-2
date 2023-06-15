@@ -3,10 +3,11 @@ Proyecto Kerbal Space Program 2
 Ramiro Flores Villarreal
 A01710879
 */
+
 /*
- *Clases hijas de la clase Engines contiene uno de los
- *tres tipos de engines disponible (Ion Fuel)
- * LiquidFuel, SolidFuel y IonFuel
+Clases hijas de la clase Engines contiene uno de los
+tres tipos de engines disponible (Ion Fuel)
+LiquidFuel, SolidFuel y IonFuel
  */
 
 #ifndef IONFUEL_H_
@@ -52,7 +53,7 @@ class IonFuel : public Engine
             return consumoElec;
     }
 
-    //Funcion imprime stats para subclase de Engines, se agregan variables 
+    //Funcion abstracta imprime stats para subclase de Engines, se agregan variables 
         void ShowStats(){
 
 
