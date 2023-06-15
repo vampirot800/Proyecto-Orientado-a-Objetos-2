@@ -14,7 +14,9 @@ Una vez que el usuario escoja sus componenntes, y en caso de no salir del menu, 
 Cada objeto tiene sus estadisticas base las cuales cambiaran y seran afectadas dependiendo de los componentes seleccionados.
 Uno de los atributos de los objetos son los costos de cada uno, los cuales se sumaran y desplegaran el costo total del cohete en la moneda de Kerbal (funds).
 
-***Este proyecto es una optimización del codigo completo anterior, haciendo uso de apuntadores, polimorfismo, clases asbtractas, etc. Sin embargo para hacer esta implementación, se opto por hacer solo una parte especifica del codigo, (Engines), por lo que el codigo no es el VAB completo, y solo cuenta con el menu de implementación de motores para el cohete, el cual imprime las estadisticas dependiendo de la selección.***
+***Este proyecto es una optimización del codigo completo anterior, haciendo uso de apuntadores, polimorfismo, clases asbtractas, etc. Sin embargo para hacer esta implementación, se opto por hacer solo una parte especifica del codigo, (Engines, clases hijas, y Rocket), por lo que el codigo no es el VAB completo, y solo cuenta con el menu de implementación de motores para el cohete, el cual imprime las estadisticas dependiendo de la selección.***
+
+**NO SE BORRO CODIGO ANTERIOR, EN LUGAR DE ESTO SE COMENTO Y SE SUSTITUYO POR EL NUEVO PARA PODER COMPARAR CAMBIOS DE OPTIMIZACION**
 
 ### Funcionalidad
 
