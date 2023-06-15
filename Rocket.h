@@ -84,17 +84,6 @@ private:
         //Funciones que añaden los engines seleccionados
         void addEngine(int option)
         {
-            //tipo 1 clase Engine -> Polimorfismo
-            engine = new LiquidFuel("LV-T45 Swivel", 1.50, 1200, 167.97, 215.0, 11.42, 
-            14.62, 13.703, 3.0);
-            // hasLiquidFuel = true; //COMENTADO PARA OPTIMIZACION DE CODIGO
-
-            //tipo 2 clase Engine -> Polimorfismo
-            engine = new IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816,
-             0.486, 8.741);
-            
-            // hasIonFuel = true; //COMENTADO PARA OPTIMIZACION DE CODIGO
-
             //Switch haciendo uso de apuntadores y clases (polimorfismo)
             switch (option)
             {
@@ -105,10 +94,12 @@ private:
                 addSolidFuel(2);
                 break;
             case 3:
+            //tipo 1 clase Engine -> Polimorfismo
                 engine = new LiquidFuel("LV-T45 Swivel", 1.50, 1200, 167.97, 215.0, 11.42, 
                 14.62, 13.703, 3.0);
                 break;
             case 4:
+            //tipo 2 clase Engine -> Polimorfismo
                 engine = new IonFuel("IX-6315 Dawn", 0.25, 8000, 0.048, 2.0, 0.019, 0.816,
                 0.486, 8.741);
 
