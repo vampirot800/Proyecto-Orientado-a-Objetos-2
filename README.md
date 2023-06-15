@@ -4,7 +4,7 @@
 
 ## Diagrama de clases
 
-![Diagrama de clases](UML.png)
+![Diagrama de clases](KSP V2.png)
 
 ### Descripción
 
