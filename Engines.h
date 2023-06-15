@@ -30,6 +30,7 @@ protected:
     double vacThrust;
     double atmTWR;
     double vacTWR;
+
 //metodos publicos que seran heredados
 public:
     //constructores
@@ -53,63 +54,64 @@ public:
         vacTWR(vacT) {};
 
     //Getters y Setters
-    string GetTipo()
+    virtual string GetTipo()
     {
         return tipo;
     }
-    double GetMasa()
+    virtual double GetMasa()
     {
         return masa;
     }
-    int GetCosto()
+    virtual int GetCosto()
     {
         return costo;
     }
-    double GetAtmthrust()
+    virtual double GetAtmthrust()
     {
         return atmThrust;
     }
-    double GetVacthrust()
+    virtual double GetVacthrust()
     {
         return vacThrust;
     }
-    double GetAtmtwr()
+    virtual double GetAtmtwr()
     {
         return atmTWR;
     }
-    double GetVactwr()
+    virtual double GetVactwr()
     {
         return vacTWR;
     }
-    void setTipo(string t)
+    virtual void setTipo(string t)
     {
         tipo = t;
     }
-    void setMasa(double m)
+    virtual void setMasa(double m)
     {
         masa = m;
     }
-    void setCosto(int c)
+    virtual void setCosto(int c)
     {
         costo = c;
     }
-    void setatmThrust(double a)
+    virtual void setatmThrust(double a)
     {
         atmThrust = a;
     }
-    void setvacThrust(double v)
+    virtual void setvacThrust(double v)
     {
         vacThrust = v;
     }
-    void setatmTWR(double at)
+    virtual void setatmTWR(double at)
     {
         atmTWR = at;
     }
-    void setvacTWR(double vt)
+    virtual void setvacTWR(double vt)
     {
         vacTWR = vt;
     }
 
+    //Clase Abstracta
     virtual void ShowStats() = 0;
 
 };

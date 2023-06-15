@@ -79,6 +79,7 @@ int main(int argc, char *argv[])
     cout << "\nWelcome " << pi.getPilot() << " Kerman!\n"
          << endl;
 
+
     // Ciclo para que el propgrama siga corriendo mientras no elija salir
     while (opcion < 3 && opcion > -1)
     {
@@ -94,21 +95,24 @@ int main(int argc, char *argv[])
             menu_engine();
             int engine;
             cin >> engine;
-            switch (engine)
-            {
-            case 1:
-                pi.addSolidFuel(1);
-                break;
-            case 2:
-                pi.addSolidFuel(2);
-                break;
-            case 3:
-                pi.addLiquidFuel();
-                break;
-            case 4:
-                pi.addIonFuel();
-                break;
-            };
+
+            pi.addEngine(engine);
+
+            // switch (engine)
+            // {
+            // case 1:
+            //     pi.addSolidFuel(1);
+            //     break;
+            // case 2:
+            //     pi.addSolidFuel(2);
+            //     break;
+            // case 3:
+            //     pi.addLiquidFuel();
+            //     break;
+            // case 4:
+            //     pi.addIonFuel();
+            //     break;
+            // };
             break;
 
         // Caso 4 muestra las estadisticas del cohete

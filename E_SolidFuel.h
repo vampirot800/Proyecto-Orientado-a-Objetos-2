@@ -53,6 +53,7 @@ class SolidFuel: public Engine{
          int setComb(string newcomb, int number) {
              return comb;
          };
+         
         //Ejemplo de sobrecarga
         // int setComb(string newcomb) {
         //     return comb;
